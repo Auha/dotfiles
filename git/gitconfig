@@ -3,3 +3,5 @@
 	email = jonathan.chen@sunrider.com
 [core]
 	autocrlf = input
+	editor = vim
+
