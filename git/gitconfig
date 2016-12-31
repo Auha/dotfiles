@@ -1,0 +1,5 @@
+[user]
+	name = Jonathan
+	email = jonathan.chen@sunrider.com
+[core]
+	autocrlf = input

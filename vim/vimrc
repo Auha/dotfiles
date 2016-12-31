@@ -1,0 +1,94 @@
+set nocompatible
+set backspace=indent,eol,start
+set autoindent
+"set editing-mode vi
+set clipboard=unnamed
+
+" Default tabs for Python
+set tabstop=4
+set expandtab
+set shiftwidth=4
+set colorcolumn=80
+
+" Defaults tabs for different files
+autocmd Filetype json setlocal ts=2 sw=2
+autocmd Filetype javascript setlocal ts=2 sw=2
+
+set showmatch
+
+filetype indent on
+
+syntax enable
+
+set number
+
+let python_highlight_all=1
+
+" Enable Folding
+
+set foldmethod=indent
+set foldlevel=99
+
+" Colorschemes
+set background=dark
+
+" Shift tab to detab
+vnoremap <S-Tab> <<
+vnoremap <Tab> >>
+inoremap <S-Tab> hello 
+"inoremap <S-Tab> <C-d>
+        
+" System clipboard
+
+set clipboard=unnamed
+
+" VIM in the Shell
+" Syntastic settings
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_typescript_tsc_fname = ''
+
+let syntastic_mode_map = {
+            \"passive_filetypes": ['html', 'typescript']
+            \}
+
+
+" Vim Airline
+
+set laststatus=2
+
+" NerdTree
+let NERDTreeIgnore = ['\.pyc$', '\.swp$']
+:map <leader>n :NERDTree<enter>
+let NERDTreeShowHidden = 1
+
+" NerdTree Commentator
+
+:map <C-\> <Leader>cc
+
+call plug#begin('~/.vim/plugged')
+Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
+Plug 'tpope/vim-git'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'altercation/vim-colors-solarized'
+Plug 'scrooloose/syntastic'
+Plug 'vim-airline/vim-airline'
+Plug 'jmcantrell/vim-virtualenv'
+Plug 'Valloric/YouCompleteMe'
+Plug 'nvie/vim-flake8'
+Plug 'vim-scripts/indentpython.vim'
+Plug 'Rykka/riv.vim'
+Plug 'scrooloose/nerdcommenter'
+Plug 'pangloss/vim-javascript'
+Plug 'leafgarland/typescript-vim'
+Plug 'editorconfig/editorconfig-vim'
+
+call plug#end()

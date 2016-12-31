@@ -1,0 +1,25 @@
+#
+# Executes commands at the start of an interactive session.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
+
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
+# Customize to your needs...
+
+export ANDROID_HOME=/usr/local/opt/android-sdk
+export FLASK_APP=run.py
+export FLASK_DEBUG=1
+
+
+
+###-tns-completion-start-###
+if [ -f /Users/tamasiaina/.tnsrc ]; then 
+    source /Users/tamasiaina/.tnsrc 
+fi
+###-tns-completion-end-###
