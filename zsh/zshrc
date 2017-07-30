@@ -12,11 +12,16 @@ fi
 
 # Customize to your needs...
 
+export WORKON_HOME=$HOME/.virtualenvs
 export ANDROID_HOME=/usr/local/opt/android-sdk
 export FLASK_APP=run.py
 export FLASK_DEBUG=1
+export PROJECT_HOME=$HOME/workspace
+source /usr/local/bin/virtualenvwrapper_lazy.sh
 
-
+#nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 ###-tns-completion-start-###
 if [ -f /Users/tamasiaina/.tnsrc ]; then 
