@@ -4,16 +4,6 @@ set autoindent
 "set editing-mode vi
 set clipboard=unnamed
 
-" Default tabs for Python
-set tabstop=4
-set expandtab
-set shiftwidth=4
-set colorcolumn=80
-
-" Defaults tabs for different files
-autocmd Filetype json setlocal ts=2 sw=2
-autocmd Filetype javascript setlocal ts=2 sw=2
-
 set showmatch
 
 filetype indent on
@@ -22,7 +12,24 @@ syntax enable
 
 set number
 
+" Python Support
+autocmd Filetype python setlocal ts=4 sw=4 colorcolumn=80
+set tabstop=4
+set expandtab
 let python_highlight_all=1
+let g:syntastic_python_checkers=[]
+
+
+" Javascript and Typescript support
+autocmd Filetype json setlocal ts=2 sw=2
+autocmd Filetype javascript setlocal ts=2 sw=2 colorcolumn=120
+autocmd Filetype Typescript setlocal ts=2 sw=2 colorcolumn=120
+let g:syntastic_typescript_tsc_fname = ''
+let g:syntastic_typescript_checkers=[]
+
+" RST
+ autocmd FileType rst setlocal expandtab sw=4 ts=4
+
 
 " Enable Folding
 
@@ -53,7 +60,6 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_typescript_tsc_fname = ''
 
 let syntastic_mode_map = {
             \"passive_filetypes": ['html', 'typescript']
@@ -65,7 +71,7 @@ let syntastic_mode_map = {
 set laststatus=2
 
 " NerdTree
-let NERDTreeIgnore = ['\.pyc$', '\.swp$']
+let NERDTreeIgnore = ['\.pyc$', '\.swp$', '.git', '.idea', 'node_modules', '.cache', '.pants.d', '.pids', '.pytest_cache', '.DS_store', '.pants.workdir.file_lock']
 :map <leader>n :NERDTree<enter>
 let NERDTreeShowHidden = 1
 
