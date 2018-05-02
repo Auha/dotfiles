@@ -17,20 +17,14 @@ autocmd Filetype python setlocal ts=4 sw=4 colorcolumn=80
 set tabstop=4
 set expandtab
 let python_highlight_all=1
-let g:syntastic_python_checkers=[]
-
 
 " Javascript and Typescript support
 autocmd Filetype json setlocal ts=2 sw=2
 autocmd Filetype javascript setlocal ts=2 sw=2 colorcolumn=120
 autocmd Filetype Typescript setlocal ts=2 sw=2 sts=4 colorcolumn=120
-let g:syntastic_typescript_tsc_fname = ''
-let g:syntastic_typescript_checkers=[]
 
 " RST
 autocmd FileType rst setlocal expandtab sw=4 ts=4 colorcolumn=80
-let g:syntastic_rst_checkers=['sphinx']
-
 
 " Enable Folding
 
@@ -51,21 +45,19 @@ inoremap <S-Tab> hello
 set clipboard=unnamed
 
 " VIM in the Shell
-" Syntastic settings
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+" ALE settings
 
-let syntastic_mode_map = {
-            \"passive_filetypes": ['html', 'java']
-            \}
-
+let g:airline#extensions#ale#enabled = 1
+let g:ale_completion_enabled = 1
+let g:ale_open_list = 1
+let g:ale_linters = {
+\   'python': ['pylint'],
+\}
 
 " Vim Airline
 
@@ -78,7 +70,7 @@ let NERDTreeShowHidden = 1
 
 " NerdTree Commentator
 
-:map <C-\> <Leader>cc
+:map <C-\> <Leader>c<space>
 
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
@@ -86,7 +78,6 @@ Plug 'tpope/vim-git'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'altercation/vim-colors-solarized'
-Plug 'scrooloose/syntastic'
 Plug 'vim-airline/vim-airline'
 Plug 'jmcantrell/vim-virtualenv'
 Plug 'Valloric/YouCompleteMe'
@@ -97,5 +88,10 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'w0rp/ale'
+Plug 'heavenshell/vim-pydocstring'
+Plug 'pantsbuild/vim-pants'
+Plug 'saltstack/salt-vim'
+Plug 'stephpy/vim-yaml'
 
 call plug#end()
