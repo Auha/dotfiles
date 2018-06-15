@@ -1,6 +1,7 @@
 set nocompatible
 set backspace=indent,eol,start
 set autoindent
+set spell spelllang=en_us
 "set editing-mode vi
 set clipboard=unnamed
 
@@ -55,9 +56,6 @@ set statusline+=%*
 let g:airline#extensions#ale#enabled = 1
 let g:ale_completion_enabled = 1
 let g:ale_open_list = 1
-let g:ale_linters = {
-\   'python': ['pylint'],
-\}
 
 " Vim Airline
 
@@ -93,5 +91,7 @@ Plug 'heavenshell/vim-pydocstring'
 Plug 'pantsbuild/vim-pants'
 Plug 'saltstack/salt-vim'
 Plug 'stephpy/vim-yaml'
+Plug 'jiangmiao/auto-pairs'
+Plug 'mattn/emmet-vim'
 
 call plug#end()
