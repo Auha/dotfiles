@@ -19,18 +19,22 @@ set tabstop=4
 set expandtab
 let python_highlight_all=1
 
+" Ini Support
+autocmd Filetype dosini setlocal ts=4 sw=4 
+
 " Javascript and Typescript support
 autocmd Filetype json setlocal ts=2 sw=2
 autocmd Filetype javascript setlocal ts=2 sw=2 colorcolumn=120
 autocmd Filetype Typescript setlocal ts=2 sw=2 sts=4 colorcolumn=120
 
+" HTML Support
+autocmd Filetype html setlocal ts=2 sw=2 colorcolumn=120
+
+" Kotlin Support
+autocmd Filetype kotlin setlocal ts=4 sw=4 colorcolumn=100
+
 " RST
 autocmd FileType rst setlocal expandtab sw=4 ts=4 colorcolumn=80
-
-" Enable Folding
-
-set foldmethod=indent
-set foldlevel=99
 
 " Colorschemes
 set background=dark
@@ -51,11 +55,20 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
+" Code Folding
+
+set foldmethod=indent
+set foldnestmax=10
+set nofoldenable
+set foldlevel=2
+
 " ALE settings
 
 let g:airline#extensions#ale#enabled = 1
 let g:ale_completion_enabled = 1
-let g:ale_open_list = 1
+let g:ale_set_quickfix=1 
+let g:ale_open_list=0
+"let g:ale_open_list = 1
 
 " Vim Airline
 
@@ -93,5 +106,6 @@ Plug 'saltstack/salt-vim'
 Plug 'stephpy/vim-yaml'
 Plug 'jiangmiao/auto-pairs'
 Plug 'mattn/emmet-vim'
+Plug 'udalov/kotlin-vim'
 
 call plug#end()
