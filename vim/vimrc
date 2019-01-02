@@ -107,5 +107,6 @@ Plug 'stephpy/vim-yaml'
 Plug 'jiangmiao/auto-pairs'
 Plug 'mattn/emmet-vim'
 Plug 'udalov/kotlin-vim'
+Plug 'Yggdroot/indentLine'
 
 call plug#end()
