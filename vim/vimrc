@@ -8,6 +8,7 @@ set clipboard=unnamed
 set showmatch
 
 filetype indent on
+filetype plugin on
 
 syntax enable
 
@@ -81,6 +82,8 @@ let NERDTreeShowHidden = 1
 
 " NerdTree Commentator
 
+let g:NERDSpaceDelims = 1
+let g:NERDCustomDelimiters = {'python': {'left': '#:'}}
 :map <C-\> <Leader>c<space>
 
 call plug#begin('~/.vim/plugged')
