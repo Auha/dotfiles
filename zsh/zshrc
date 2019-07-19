@@ -29,3 +29,7 @@ if [ -f /Users/tamasiaina/.tnsrc ]; then
     source /Users/tamasiaina/.tnsrc 
 fi
 ###-tns-completion-end-###
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/tamasiaina/.sdkman"
+[[ -s "/Users/tamasiaina/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/tamasiaina/.sdkman/bin/sdkman-init.sh"

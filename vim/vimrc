@@ -20,7 +20,10 @@ set tabstop=4
 set expandtab
 let python_highlight_all=1
 
-" Ini Support
+" Java Support
+autocmd Filetype java setlocal ts=4 sw=4
+
+"" Ini Support
 autocmd Filetype dosini setlocal ts=4 sw=4 
 
 " Javascript and Typescript support
@@ -36,6 +39,9 @@ autocmd Filetype kotlin setlocal ts=4 sw=4 colorcolumn=100
 
 " RST
 autocmd FileType rst setlocal expandtab sw=4 ts=4 colorcolumn=80
+
+" MD
+autocmd FileType markdown setlocal expandtab sw=4 ts=4 colorcolumn=80
 
 " Colorschemes
 set background=dark
@@ -69,6 +75,9 @@ let g:airline#extensions#ale#enabled = 1
 let g:ale_completion_enabled = 1
 let g:ale_set_quickfix=1 
 let g:ale_open_list=0
+let g:ale_pattern_options = {
+\   'build.gradle.kts': {'ale_enabled': 0}
+\}
 "let g:ale_open_list = 1
 
 " Vim Airline
@@ -76,7 +85,7 @@ let g:ale_open_list=0
 set laststatus=2
 
 " NerdTree
-let NERDTreeIgnore = ['\.pyc$', '\.swp$', '.git', '.idea', 'node_modules', '.cache', '.pants.d', '.pids', '.pytest_cache', '.DS_store', '.pants.workdir.file_lock', '.DS_Store']
+let NERDTreeIgnore = ['\.pyc$', '\.swp$', '.git', '.idea', 'node_modules', '.cache', '.pants.d', '.pids', '.pytest_cache', '.DS_store', '.pants.workdir.file_lock', '.DS_Store', '.gradle[[dir]]', '\.js$']
 :map <leader>n :NERDTree<enter>
 let NERDTreeShowHidden = 1
 
@@ -92,6 +101,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tpope/vim-git'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-markdown'
 Plug 'altercation/vim-colors-solarized'
 Plug 'vim-airline/vim-airline'
 Plug 'jmcantrell/vim-virtualenv'
