@@ -2,6 +2,9 @@ set nocompatible
 set backspace=indent,eol,start
 set autoindent
 set spell spelllang=en_us
+set tabstop=4
+set shiftwidth=4
+set expandtab
 "set editing-mode vi
 set clipboard=unnamed
 
@@ -85,7 +88,7 @@ let g:ale_pattern_options = {
 set laststatus=2
 
 " NerdTree
-let NERDTreeIgnore = ['\.pyc$', '\.swp$', '.git', '.idea', 'node_modules', '.cache', '.pants.d', '.pids', '.pytest_cache', '.DS_store', '.pants.workdir.file_lock', '.DS_Store', '.gradle[[dir]]', '\.js$']
+let NERDTreeIgnore = ['\.pyc$', '\.swp$', '.git', '.idea', 'node_modules', '.cache', '.pants.d', '.pids', '.pytest_cache', '.DS_store', '.pants.workdir.file_lock', '.DS_Store', '.gradle[[dir]]', '\.js$', 'bazel*']
 :map <leader>n :NERDTree<enter>
 let NERDTreeShowHidden = 1
 
@@ -122,5 +125,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'mattn/emmet-vim'
 Plug 'udalov/kotlin-vim'
 Plug 'Yggdroot/indentLine'
+Plug 'google/vim-maktaba'
+Plug 'bazelbuild/vim-bazel'
 
 call plug#end()
