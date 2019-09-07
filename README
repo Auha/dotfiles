@@ -3,4 +3,8 @@ The personal dotfiles of Jonathan Chen.
 The terminal software uses the following technology.
 
 * zsh
+* git
 
+# Git Setup
+`apt install git`
+`ln -s /home/jonathan/workspace/dotfiles/git/gitconfig /home/jonathan/.gitconfig`
