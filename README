@@ -6,5 +6,5 @@ The terminal software uses the following technology.
 * git
 
 # Git Setup
-`apt install git`
-`ln -s /home/jonathan/workspace/dotfiles/git/gitconfig /home/jonathan/.gitconfig`
+```apt install git```
+```ln -s /home/jonathan/workspace/dotfiles/git/gitconfig /home/jonathan/.gitconfig```
