@@ -15,6 +15,18 @@ brew install git
 ln -s /home/jonathan/workspace/dotfiles/git/gitconfig /home/jonathan/.gitconfig
 ```
 
+# Setup ZSH and Default shell
+
+## ZSH for Ubuntu
+
+Copy over the different zsh files
+
+```console
+ln -s /home/jonathan/workspace/dotfiles/zsh/zpreztorc /home/jonathan/.zpreztorc
+ln -s /home/jonathan/workspace/dotfiles/zsh/zprofile /home/jonathan/.zprofile
+ln -s /home/jonathan/workspace/dotfiles/zsh/zshrc /home/jonathan/.zshrc
+```
+
 # VIM Setup
 
 ```console
@@ -31,3 +43,12 @@ Go into a VIM session
 :PlugInstall
 
 ```
+
+##Installing YCMD Core
+
+Go to the following Link: https://github.com/ycm-core/YouCompleteMe#installation
+
+
+
+
+
