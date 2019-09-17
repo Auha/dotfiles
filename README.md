@@ -52,6 +52,17 @@ Change the default shell:
 chsh -s /bin/zsh
 ```
 
+Log out of the session and log back in. Sometimes you may need to restart.
+
+Follow the instructions on this to install Prezto
+
+https://github.com/sorin-ionescu/prezto
+
+After following the instructions we will need to install the missing symbols
+
+You will most likely need to install the Powerline-patched Font at this link.
+https://github.com/powerline/fonts
+
 # VIM Setup
 
 ```console
