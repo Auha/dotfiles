@@ -23,6 +23,10 @@ ln -s /home/jonathan/workspace/dotfiles/git/gitconfig /home/jonathan/.gitconfig
 sudo apt install build-essential cmake python3-dev
 ```
 
+We also need to install `virtualenvwrapper`
+
+
+
 # Setup ZSH and Default shell
 
 ## ZSH for Ubuntu
