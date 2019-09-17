@@ -23,8 +23,15 @@ ln -s /home/jonathan/workspace/dotfiles/git/gitconfig /home/jonathan/.gitconfig
 sudo apt install build-essential cmake python3-dev
 ```
 
-We also need to install `virtualenvwrapper`
+We also need to install `virtualenvwrapper` Since we are trying to migrate 
+everything over to Python 3, we will use Python 3 to install everything.
 
+```console
+sudo pip3 install virtualenvwrapper
+```
+
+By next year, I will migrate everything over to Python 3 and use alias to get 
+it to work together.
 
 
 # Setup ZSH and Default shell
