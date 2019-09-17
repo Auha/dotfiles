@@ -15,6 +15,14 @@ brew install git
 ln -s /home/jonathan/workspace/dotfiles/git/gitconfig /home/jonathan/.gitconfig
 ```
 
+# Setup Programming Language
+
+## Python and Python3
+
+```console
+sudo apt install build-essential cmake python3-dev
+```
+
 # Setup ZSH and Default shell
 
 ## ZSH for Ubuntu
@@ -25,6 +33,12 @@ Copy over the different zsh files
 ln -s /home/jonathan/workspace/dotfiles/zsh/zpreztorc /home/jonathan/.zpreztorc
 ln -s /home/jonathan/workspace/dotfiles/zsh/zprofile /home/jonathan/.zprofile
 ln -s /home/jonathan/workspace/dotfiles/zsh/zshrc /home/jonathan/.zshrc
+```
+
+Change the default shell:
+
+```console
+chsh -s /bin/zsh
 ```
 
 # VIM Setup
@@ -44,7 +58,7 @@ Go into a VIM session
 
 ```
 
-##Installing YCMD Core
+## Installing YCMD Core
 
 Go to the following Link: https://github.com/ycm-core/YouCompleteMe#installation
 
