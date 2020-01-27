@@ -7,8 +7,9 @@ set shiftwidth=4
 set expandtab
 "set editing-mode vi
 set clipboard=unnamed
-
+set encoding=utf-8
 set showmatch
+set noshowmode
 
 filetype indent on
 filetype plugin on
@@ -86,9 +87,12 @@ let g:ale_pattern_options = {
 " Vim Airline
 
 set laststatus=2
+let g:airline_powerline_fonts = 1
+let g:airline_solarized_bg='dark'
+set t_Co=256
 
 " NerdTree
-let NERDTreeIgnore = ['\.pyc$', '\.swp$', '.git', '.idea', 'node_modules', '.cache', '.pants.d', '.pids', '.pytest_cache', '.DS_store', '.pants.workdir.file_lock', '.DS_Store', '.gradle[[dir]]', '\.js$', 'bazel*']
+let NERDTreeIgnore = ['\.pyc$', '\.swp$', '\.git$', '.idea', 'node_modules', '.cache', '.pants.d', '.pids', '.pytest_cache', '.pants.workdir.file_lock', '.DS_Store', '.gradle[[dir]]', 'bazel-']
 :map <leader>n :NERDTree<enter>
 let NERDTreeShowHidden = 1
 
@@ -97,6 +101,19 @@ let NERDTreeShowHidden = 1
 let g:NERDSpaceDelims = 1
 let g:NERDCustomDelimiters = {'python': {'left': '#:'}}
 :map <C-\> <Leader>c<space>
+
+" Templates
+augroup templates
+    autocmd!
+    autocmd BufRead *.py call s:ApplyTemplate()
+
+    function! s:ApplyTemplate()
+        if getfsize(expand('%')) == 0
+            execute "0r ~/.vim/templates/skeleton." . expand('%:e')
+            execute "%s/__CLASS_NAME__/" . expand('%:t:r') . "/e"
+        endif
+    endfun
+augroup END
 
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
@@ -107,6 +124,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-markdown'
 Plug 'altercation/vim-colors-solarized'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'jmcantrell/vim-virtualenv'
 Plug 'Valloric/YouCompleteMe'
 Plug 'nvie/vim-flake8'
@@ -127,5 +145,6 @@ Plug 'udalov/kotlin-vim'
 Plug 'Yggdroot/indentLine'
 Plug 'google/vim-maktaba'
 Plug 'bazelbuild/vim-bazel'
+Plug 'tibabit/vim-templates'
 
 call plug#end()
