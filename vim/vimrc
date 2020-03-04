@@ -106,6 +106,9 @@ let g:NERDCustomDelimiters = {'python': {'left': '#:'}}
 augroup templates
     autocmd!
     autocmd BufRead *.py call s:ApplyTemplate()
+    autocmd BufRead *.component.ts call s:ApplyComponent()
+    autocmd BufRead *.module.ts call s:ApplyModule()
+    autocmd BufRead *.routes.ts call s:ApplyRoutes()
 
     function! s:ApplyTemplate()
         if getfsize(expand('%')) == 0
@@ -113,7 +116,30 @@ augroup templates
             execute "%s/__CLASS_NAME__/" . expand('%:t:r') . "/e"
         endif
     endfun
+
+    function! s:ApplyComponent()
+        if getfsize(expand('%')) == 0
+            execute "0r ~/.vim/templates/skeleton.component.ts" 
+            execute "%s/__CLASS_NAME__/" . expand('%:t:r') . "/e"
+        endif
+    endfun
+
+    function! s:ApplyModule()
+        if getfsize(expand('%')) == 0
+            execute "0r ~/.vim/templates/skeleton.module.ts" 
+            execute "%s/__CLASS_NAME__/" . expand('%:t:r') . "/e"
+        endif
+    endfun
+
+    function! s:ApplyRoutes()
+        if getfsize(expand('%')) == 0
+            execute "0r ~/.vim/templates/skeleton.routes.ts" 
+            execute "%s/__CLASS_NAME__/" . expand('%:t:r') . "/e"
+        endif
+    endfun
 augroup END
+
+" Snippets
 
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
