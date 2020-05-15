@@ -172,5 +172,6 @@ Plug 'Yggdroot/indentLine'
 Plug 'google/vim-maktaba'
 Plug 'bazelbuild/vim-bazel'
 Plug 'tibabit/vim-templates'
+Plug 'OmniSharp/omnisharp-vim'
 
 call plug#end()
