@@ -1,7 +1,7 @@
 set nocompatible
 set backspace=indent,eol,start
 set autoindent
-set spell spelllang=en_us
+" set spell spelllang=en_us
 set tabstop=4
 set shiftwidth=4
 set expandtab
@@ -152,7 +152,6 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'jmcantrell/vim-virtualenv'
-Plug 'Valloric/YouCompleteMe'
 Plug 'nvie/vim-flake8'
 Plug 'vim-scripts/indentpython.vim'
 Plug 'Rykka/riv.vim'

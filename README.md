@@ -84,7 +84,14 @@ Go into a VIM session
 
 Go to the following Link: https://github.com/ycm-core/YouCompleteMe#installation
 
+:warning: just remove YCMD Core due to sluggishness 
 
+## Adding Skeleton templates
 
+```console
+ln -s /Users/jonathan/workspace/dotfiles/templates /Users/jonathan/.vim/templates
 
+```
+
+This will create a template folder
 
