@@ -5,7 +5,7 @@
 
     Description
 
-    :copyright: (c) 2019 by Company
+    :copyright: (c) 2020 by Company
     :license: LICENSE
 
 """
