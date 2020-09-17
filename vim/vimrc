@@ -77,9 +77,9 @@ set foldlevel=2
 
 set completeopt+=noinsert
 let g:airline#extensions#ale#enabled = 1
-let g:ale_completion_enabled = 1
-let g:ale_set_quickfix=1 
-let g:ale_open_list=0
+let g:ale_completion_enabled = 0
+let g:ale_set_quickfix = 1
+let g:ale_open_list = 0
 let g:ale_pattern_options = {
 \   'build.gradle.kts': {'ale_enabled': 0}
 \}
@@ -100,9 +100,9 @@ set t_Co=256
 let NERDTreeIgnore = ['\.pyc$', '\.swp$', '\.git$', '.idea', 'node_modules', '.cache', '.pants.d', '.pids', '.pytest_cache', '.pants.workdir.file_lock', '.DS_Store', '.gradle[[dir]]', 'bazel-']
 :map <leader>n :NERDTree<enter>
 let NERDTreeShowHidden = 1
+let g:NERDTreeWinSize=50
 
 " NerdTree Commentator
-
 let g:NERDSpaceDelims = 1
 let g:NERDCustomDelimiters = {'python': {'left': '#:'}}
 :map <C-\> <Leader>c<space>
