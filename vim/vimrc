@@ -33,7 +33,7 @@ autocmd Filetype dosini setlocal ts=4 sw=4
 " Javascript and Typescript support
 autocmd Filetype json setlocal ts=2 sw=2
 autocmd Filetype javascript setlocal ts=2 sw=2 colorcolumn=120
-autocmd Filetype Typescript setlocal ts=2 sw=2 sts=4 colorcolumn=120
+autocmd Filetype typescript setlocal ts=2 sw=2 sts=4 colorcolumn=120
 
 " HTML Support
 autocmd Filetype html setlocal ts=2 sw=2 colorcolumn=120
