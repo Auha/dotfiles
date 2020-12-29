@@ -14,33 +14,6 @@ brew install git
 ```console
 ln -s /home/jonathan/workspace/dotfiles/git/gitconfig /home/jonathan/.gitconfig
 ```
-
-# Setup Programming Language
-
-## Install PyEnv
-
-```console
-sudo apt install build-essential cmake make libssl-dev zlib1g-dev libbz2-dev 
-libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev xz-utils tk-dev libxml2-dev 
-libxmlsec1-dev libffi-dev liblzma-dev
-```
-
-Afterwards we will install pyenv
-```console
-curl https://pyenv.run | bash
-```
-
-We also need to install `virtualenvwrapper` Since we are trying to migrate 
-everything over to Python 3, we will use Python 3 to install everything.
-
-```console
-sudo pip3 install virtualenvwrapper
-```
-
-By next year, I will migrate everything over to Python 3 and use alias to get 
-it to work together.
-
-
 # Setup ZSH and Default shell
 
 ## ZSH for Ubuntu
@@ -69,6 +42,33 @@ After following the instructions we will need to install the missing symbols
 
 You will most likely need to install the Powerline-patched Font at this link.
 https://github.com/powerline/fonts
+
+# Setup Programming Language
+
+## Install PyEnv
+
+```console
+sudo apt install build-essential cmake make libssl-dev zlib1g-dev libbz2-dev 
+libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev xz-utils tk-dev libxml2-dev 
+libxmlsec1-dev libffi-dev liblzma-dev
+```
+
+Afterwards we will install pyenv
+```console
+curl https://pyenv.run | bash
+```
+
+We also need to install `virtualenvwrapper` Since we are trying to migrate 
+everything over to Python 3, we will use Python 3 to install everything.
+
+```console
+sudo pip3 install virtualenvwrapper
+```
+
+By next year, I will migrate everything over to Python 3 and use alias to get 
+it to work together.
+
+
 
 # VIM Setup
 
