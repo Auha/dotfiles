@@ -17,10 +17,17 @@ ln -s /home/jonathan/workspace/dotfiles/git/gitconfig /home/jonathan/.gitconfig
 
 # Setup Programming Language
 
-## Python and Python3
+## Install PyEnv
 
 ```console
-sudo apt install build-essential cmake python3-dev
+sudo apt install build-essential cmake make libssl-dev zlib1g-dev libbz2-dev 
+libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev xz-utils tk-dev libxml2-dev 
+libxmlsec1-dev libffi-dev liblzma-dev
+```
+
+Afterwards we will install pyenv
+```console
+curl https://pyenv.run | bash
 ```
 
 We also need to install `virtualenvwrapper` Since we are trying to migrate 
