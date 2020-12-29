@@ -43,6 +43,8 @@ After following the instructions we will need to install the missing symbols
 You will most likely need to install the Powerline-patched Font at this link.
 https://github.com/powerline/fonts
 
+https://docs.microsoft.com/en-us/windows/terminal/tutorials/powerline-setup
+
 # Setup Programming Language
 
 ## Install PyEnv
