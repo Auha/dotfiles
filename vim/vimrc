@@ -176,9 +176,9 @@ Plug 'google/vim-maktaba'
 Plug 'bazelbuild/vim-bazel'
 Plug 'tibabit/vim-templates'
 Plug 'OmniSharp/omnisharp-vim'
-Plug 'stanangeloff/php.vim'
 Plug 'jparise/vim-graphql'
 Plug 'hashivim/vim-terraform'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'kevinoid/vim-jsonc'
 
 call plug#end()
