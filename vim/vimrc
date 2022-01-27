@@ -77,17 +77,20 @@ set foldlevel=2
 
 set completeopt+=noinsert
 let g:airline#extensions#ale#enabled = 1
-let g:ale_completion_enabled = 0
+let g:ale_completion_enabled = 1
 let g:ale_set_quickfix = 1
-let g:ale_open_list = 0
+let g:ale_open_list = 1 
 let g:ale_pattern_options = {
-\   'build.gradle.kts': {'ale_enabled': 0}
+\   'build.gradle.kts': {'ale_enabled': 0},
+\   'angular.json': {'ale_enabled': 0},
+\   'package.json': {'ale_enabled': 0},
+\   'node_modules/*': {'ale_enabled': 0}
 \}
 let g:ale_linters = {
 \   'typescript': ['tslint'],
 \   'javascript': ['eslint']
 \}
-"let g:ale_open_list = 1
+let g:ale_open_list = 1
 
 " Vim Airline
 
@@ -164,7 +167,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
 Plug 'heavenshell/vim-pydocstring'
 Plug 'saltstack/salt-vim'
 Plug 'stephpy/vim-yaml'
