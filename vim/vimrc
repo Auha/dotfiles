@@ -185,5 +185,6 @@ Plug 'jparise/vim-graphql'
 Plug 'hashivim/vim-terraform'
 Plug 'kevinoid/vim-jsonc'
 Plug 'kristijanhusak/vim-dadbod-ui'
+Plug 'dart-lang/dart-vim-plugin'
 
 call plug#end()
