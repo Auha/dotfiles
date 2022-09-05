@@ -1,10 +1,14 @@
 set nocompatible
 set backspace=indent,eol,start
 set autoindent
+
 " set spell spelllang=en_us
 set tabstop=4
 set shiftwidth=4
 set expandtab
+set list
+set listchars=tab:>-
+
 "set editing-mode vi
 set clipboard=unnamed
 set encoding=utf-8
@@ -100,7 +104,7 @@ let g:airline_solarized_bg='dark'
 set t_Co=256
 
 " NerdTree
-let NERDTreeIgnore = ['\.pyc$', '\.swp$', '\.git$', '.idea', 'node_modules', '.cache', '.pants.d', '.pids', '.pytest_cache', '.pants.workdir.file_lock', '.DS_Store', '.gradle[[dir]]', 'bazel-']
+let NERDTreeIgnore = ['\.pyc$', '\.swp$', '\.git$', '.idea', 'node_modules', '.cache', '.pants.d', '.pids', '.pytest_cache', '.pants.workdir.file_lock', '.DS_Store', '.gradle[[dir]]', 'bazel-', '.angular', 'dist/']
 :map <leader>n :NERDTree<enter>
 let NERDTreeShowHidden = 1
 let g:NERDTreeWinSize=50
