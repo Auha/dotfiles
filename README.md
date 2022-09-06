@@ -60,16 +60,18 @@ Afterwards we will install pyenv
 curl https://pyenv.run | bash
 ```
 
-We also need to install `virtualenvwrapper` Since we are trying to migrate 
-everything over to Python 3, we will use Python 3 to install everything.
+## Install NVM for NodeJS
+
+Go to the following URL to install the latest version of NVM
+https://github.com/nvm-sh/nvm#installing-and-updating
+
+## Install SDKMan to install Java SDK's
+
+Execute the following script to get sdk man to install and be useable.
 
 ```console
-sudo pip3 install virtualenvwrapper
+curl -s "https://get.sdkman.io" | bash
 ```
-
-By next year, I will migrate everything over to Python 3 and use alias to get 
-it to work together.
-
 
 
 # VIM Setup
