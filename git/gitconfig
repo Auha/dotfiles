@@ -1,16 +1,16 @@
 [user]
-	name = Jonathan
-	email = tamasiaina@gmail.com
+    name = Jonathan
+    email = tamasiaina@gmail.com
 
 [core]
-	autocrlf = input
-	editor = vim
+    autocrlf = input
+    editor = vim
 
 [push]
-	default = simple
+    default = simple
 
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
