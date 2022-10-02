@@ -31,7 +31,9 @@ let python_highlight_all=1
 " Java Support
 autocmd Filetype java setlocal ts=4 sw=4
 
-"" Ini Support
+autocmd Filetype dart setlocal ts=2 sw=2
+
+" Ini Support
 autocmd Filetype dosini setlocal ts=4 sw=4 
 
 " Javascript and Typescript support
