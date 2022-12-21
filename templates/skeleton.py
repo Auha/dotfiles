@@ -5,7 +5,7 @@
 
     Description
 
-    :copyright: (c) 2021 by Company
+    :copyright: (c) 2022 by Company
     :license: LICENSE
 
 """
