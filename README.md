@@ -45,6 +45,10 @@ https://github.com/powerline/fonts
 
 https://docs.microsoft.com/en-us/windows/terminal/tutorials/powerline-setup
 
+For themes on MacOSX
+
+https://github.com/lysyi3m/macos-terminal-themes
+
 # Setup Programming Language
 
 ## Install PyEnv
