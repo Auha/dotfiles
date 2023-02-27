@@ -1,6 +1,7 @@
 #
 # Executes commands at login pre-zshrc.
 #
+
 # Authors:
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
@@ -75,8 +76,4 @@ TMPPREFIX="${TMPDIR%/}/zsh"
 export ANDROID_HOME=/usr/local/share/android-commandlinetools
 export JAVA_HOME=/Library/Java/Home
 
-#: Pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
 
