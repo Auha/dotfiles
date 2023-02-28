@@ -29,3 +29,5 @@ export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/nu
 export LIBGL_ALWAYS_INDIRECT=1
 
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+source /Users/jonathan/.docker/init-zsh.sh || true # Added by Docker Desktop
