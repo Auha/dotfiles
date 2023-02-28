@@ -94,12 +94,14 @@ Go into a VIM session
 :PlugInstall
 
 ```
+# NeoVIM Setup
+```console
+brew install neovim
+```
 
-## Installing YCMD Core
-
-Go to the following Link: https://github.com/ycm-core/YouCompleteMe#installation
-
-:warning: just remove YCMD Core due to sluggishness 
+```console
+ln -s /home/jonathan/workspace/dotfiles/nvim/init.vim /home/jonathan/.config/nvim/init.vim
+```
 
 ## Adding Skeleton templates
 
