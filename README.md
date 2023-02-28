@@ -49,6 +49,13 @@ For themes on MacOSX
 
 https://github.com/lysyi3m/macos-terminal-themes
 
+For nerdtree fonts:
+
+```console
+brew tap homebrew/cask-fonts
+brew install font-hack-nerd-font
+```
+
 # Setup Programming Language
 
 ## Install PyEnv
