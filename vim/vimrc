@@ -9,7 +9,7 @@ set expandtab
 set list
 set listchars=tab:>-
 
-"set editing-mode vi
+" set editing-mode vi
 set clipboard=unnamed
 set encoding=UTF-8
 set showmatch
@@ -19,8 +19,8 @@ filetype indent on
 filetype plugin on
 
 syntax enable
-
 set number
+set pastetoggle=<leader>p
 
 " Python Support
 autocmd Filetype python setlocal ts=4 sw=4 colorcolumn=80
