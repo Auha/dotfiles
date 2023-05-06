@@ -84,6 +84,18 @@ Execute the following script to get sdk man to install and be useable.
 curl -s "https://get.sdkman.io" | bash
 ```
 
+# Setup Flutter
+
+## Install FVM
+
+`brew tap leoafarias/fvm`
+`brew install fvm`
+
+## Setup the latest version of flutter
+
+https://fvm.app/docs/guides/basic_commands
+
+## Install Sidekick for flutter
 
 # VIM Setup
 
