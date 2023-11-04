@@ -9,9 +9,6 @@ if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
 
-#: Homebrew
-export PATH="/opt/homebrew/bin:$PATH"
-
 #: psql
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 
@@ -56,3 +53,7 @@ if [ "$(arch)" = "arm64" ]; then
 else
     eval "$(/usr/local/bin/brew shellenv)"
 fi
+#
+#: Rbenv
+eval "$(rbenv init - zsh)"
+
