@@ -93,7 +93,8 @@ let g:ale_pattern_options = {
 \   'build.gradle.kts': {'ale_enabled': 0},
 \   'angular.json': {'ale_enabled': 0},
 \   'package.json': {'ale_enabled': 0},
-\   'node_modules/*': {'ale_enabled': 0}
+\   'node_modules/*': {'ale_enabled': 0},
+\   '**/*.html': {'ale_enabled': 0},
 \}
 
 let g:ale_linters = {
@@ -120,6 +121,9 @@ let g:NERDTreeWinSize=50
 let g:NERDSpaceDelims = 1
 let g:NERDCustomDelimiters = {'python': {'left': '#:'}}
 :map <C-\> <Leader>c<space>
+
+"Copilot settings
+
 
 " Templates
 augroup templates
@@ -202,5 +206,6 @@ Plug 'kevinoid/vim-jsonc'
 Plug 'kristijanhusak/vim-dadbod-ui'
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'keith/swift.vim'
+Plug 'github/copilot.vim'
 
 call plug#end()
