@@ -21,6 +21,11 @@ export SDKMAN_DIR="$HOME/.sdkman"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
+#: fvm and Dart
+# export PATH="$PATH:/opt/homebrew/bin/dart"
+export PATH="$PATH:/Users/jonathan/fvm/versions/stable/bin"
+
+
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
@@ -57,7 +62,9 @@ fi
 #: Rbenv
 eval "$(rbenv init - zsh)"
 
-
-
 # Load Angular CLI autocompletion.
 source <(ng completion script)
+
+#: Aliases
+alias f="fvm flutter"
+alias d="fvm dart"

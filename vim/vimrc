@@ -112,8 +112,8 @@ let g:airline_solarized_bg='dark'
 set t_Co=256
 
 " NerdTree
-let NERDTreeIgnore = ['\.pyc$', '\.swp$', '\.git$', '.idea', 'node_modules', '.cache', '.pids', '.pytest_cache', '.DS_Store', '.gradle[[dir]]', 'bazel-', '.angular', 'dist/']
-:map <leader>n :NERDTree<enter>
+let NERDTreeIgnore = ['\.pyc$', '\.swp$', '\.git$', '.idea', 'node_modules', '.cache', '.pids', '.pytest_cache', '.DS_Store', '.gradle[[dir]]', 'bazel-', '.angular', 'dist/', 'dist']
+" :map <leader>n :NERDTree<enter>
 let NERDTreeShowHidden = 1
 let g:NERDTreeWinSize=50
 
@@ -122,45 +122,38 @@ let g:NERDSpaceDelims = 1
 let g:NERDCustomDelimiters = {'python': {'left': '#:'}}
 :map <C-\> <Leader>c<space>
 
+" Fern
+
+:map <leader>n :Fern . -toggle -drawer -width=50 -keep -reveal=%<CR>
+let g:fern#default_hidden = 1
+let g:fern#renderer = 'nerdfont'
+let g:fern#default_exclude = '^\%(\.git\|node_modules\|__pycache__\|\.idea\|.*\.swp\|dist\|bazel-.*\|\.gradle\|\.angular\|\.cache\|\.pids\|\.pytest_cache\|\.DS_Store\|.*\.pyc\|build\)$'
+let g:fern_git_status#disable_ignored = 1
+let g:fern_git_status#disable_untracked = 1
+let g:fern_get_status#disable_submodules = 1
+
+function! s:init_fern() abort
+  nmap <buffer> o <Plug>(fern-action-open:edit)
+  nmap <buffer> s <Plug>(fern-action-open:vsplit)
+  nmap <buffer> gs <Plug>(fern-action-open:vsplit)<C-w>p
+  nmap <buffer> r <Plug>(fern-action-reload)
+endfunction
+
+augroup fern-custom
+  autocmd!
+  autocmd FileType fern call s:init_fern()
+augroup END
+
+augroup my-glyph-palette
+  autocmd!
+  autocmd FileType fern call glyph_palette#apply()
+  autocmd FileType nerdtree,startify call glyph_palette#apply()
+augroup END
+
+
 "Copilot settings
 
 
-" Templates
-augroup templates
-    autocmd!
-    autocmd BufRead *.py call s:ApplyTemplate()
-    autocmd BufRead *.component.ts call s:ApplyComponent()
-    autocmd BufRead *.module.ts call s:ApplyModule()
-    autocmd BufRead *.routes.ts call s:ApplyRoutes()
-
-    function! s:ApplyTemplate()
-        if getfsize(expand('%')) == 0
-            execute "0r ~/.vim/templates/skeleton." . expand('%:e')
-            execute "%s/__CLASS_NAME__/" . expand('%:t:r') . "/e"
-        endif
-    endfun
-
-    function! s:ApplyComponent()
-        if getfsize(expand('%')) == 0
-            execute "0r ~/.vim/templates/skeleton.component.ts" 
-            execute "%s/__CLASS_NAME__/" . expand('%:t:r') . "/e"
-        endif
-    endfun
-
-    function! s:ApplyModule()
-        if getfsize(expand('%')) == 0
-            execute "0r ~/.vim/templates/skeleton.module.ts" 
-            execute "%s/__CLASS_NAME__/" . expand('%:t:r') . "/e"
-        endif
-    endfun
-
-    function! s:ApplyRoutes()
-        if getfsize(expand('%')) == 0
-            execute "0r ~/.vim/templates/skeleton.routes.ts" 
-            execute "%s/__CLASS_NAME__/" . expand('%:t:r') . "/e"
-        endif
-    endfun
-augroup END
 
 " Dadbod UI
 
@@ -207,5 +200,10 @@ Plug 'kristijanhusak/vim-dadbod-ui'
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'keith/swift.vim'
 Plug 'github/copilot.vim'
+Plug 'lambdalisue/fern.vim'
+Plug 'lambdalisue/nerdfont.vim'
+Plug 'lambdalisue/fern-renderer-nerdfont.vim'
+Plug 'lambdalisue/fern-git-status.vim'
+Plug 'lambdalisue/glyph-palette.vim'
 
 call plug#end()
