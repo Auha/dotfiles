@@ -73,7 +73,6 @@ if [[ ! -d "$TMPDIR" ]]; then
 fi
 
 TMPPREFIX="${TMPDIR%/}/zsh"
-export ANDROID_HOME=/usr/local/share/android-commandlinetools
 export JAVA_HOME=/Library/Java/Home
 
 

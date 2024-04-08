@@ -23,8 +23,7 @@ export NVM_DIR="$HOME/.nvm"
 
 #: fvm and Dart
 # export PATH="$PATH:/opt/homebrew/bin/dart"
-export PATH="$PATH:/Users/jonathan/fvm/versions/stable/bin"
-
+export PATH="/Users/jonathan/fvm/versions/stable/bin:$PATH"
 
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
@@ -58,7 +57,7 @@ if [ "$(arch)" = "arm64" ]; then
 else
     eval "$(/usr/local/bin/brew shellenv)"
 fi
-#
+
 #: Rbenv
 eval "$(rbenv init - zsh)"
 
@@ -68,3 +67,8 @@ source <(ng completion script)
 #: Aliases
 alias f="fvm flutter"
 alias d="fvm dart"
+export ANDROID_HOME=/Users/jonathan/Library/Android/sdk
+
+
+
+

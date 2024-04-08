@@ -111,12 +111,6 @@ let g:airline_powerline_fonts = 1
 let g:airline_solarized_bg='dark'
 set t_Co=256
 
-" NerdTree
-let NERDTreeIgnore = ['\.pyc$', '\.swp$', '\.git$', '.idea', 'node_modules', '.cache', '.pids', '.pytest_cache', '.DS_Store', '.gradle[[dir]]', 'bazel-', '.angular', 'dist/', 'dist']
-" :map <leader>n :NERDTree<enter>
-let NERDTreeShowHidden = 1
-let g:NERDTreeWinSize=50
-
 " NerdTree Commentator
 let g:NERDSpaceDelims = 1
 let g:NERDCustomDelimiters = {'python': {'left': '#:'}}
@@ -130,7 +124,7 @@ let g:fern#renderer = 'nerdfont'
 let g:fern#default_exclude = '^\%(\.git\|node_modules\|__pycache__\|\.idea\|.*\.swp\|dist\|bazel-.*\|\.gradle\|\.angular\|\.cache\|\.pids\|\.pytest_cache\|\.DS_Store\|.*\.pyc\|build\)$'
 let g:fern_git_status#disable_ignored = 1
 let g:fern_git_status#disable_untracked = 1
-let g:fern_get_status#disable_submodules = 1
+let g:fern_git_status#disable_submodules = 1
 
 function! s:init_fern() abort
   nmap <buffer> o <Plug>(fern-action-open:edit)
@@ -160,10 +154,7 @@ augroup END
 let g:db_ui_use_nerd_fonts = 1
 
 call plug#begin('~/.vim/plugged')
-Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
-Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'tpope/vim-git'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-fugitive'
