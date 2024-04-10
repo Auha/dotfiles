@@ -1,5 +1,7 @@
 return {
     "hashivim/vim-terraform",
     "leafgarland/typescript-vim",
-    "pangloss/vim-javascript"
+    "pangloss/vim-javascript",
+    "tpope/vim-markdown",
+    "Rykka/riv.vim"
 }

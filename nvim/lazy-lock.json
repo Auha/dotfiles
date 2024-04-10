@@ -1,4 +1,6 @@
 {
+  "ale": { "branch": "master", "commit": "6db58b33795430a6165f27c7f796c420c0e098e4" },
+  "auto-pairs": { "branch": "master", "commit": "cd97efbeba5fdf66cf3db0c8fad5660e571bffa3" },
   "copilot.vim": { "branch": "release", "commit": "7097b09e52621a97d11f254e04de5e5a0f26e5f5" },
   "fern-git-status.vim": { "branch": "master", "commit": "151336335d3b6975153dad77e60049ca7111da8e" },
   "fern-renderer-nerdfont.vim": { "branch": "master", "commit": "84fae1b9caf2ec9e185bf150ce5e85cf8f18a268" },
@@ -7,7 +9,18 @@
   "lazy.nvim": { "branch": "main", "commit": "31ddbea7c10b6920c9077b66c97951ca8682d5c8" },
   "nerdcommenter": { "branch": "master", "commit": "e361a44230860d616f799a337bc58f5218ab6e9c" },
   "nerdfont.vim": { "branch": "master", "commit": "e054fd135ee73db37cd5bf545e0ff9948ffec7bc" },
+  "nvim-treesitter": { "branch": "master", "commit": "46b587eb38701c02360042fce284cc8ec2653c30" },
+  "riv.vim": { "branch": "master", "commit": "ff27093faec2c9b3e3269bdc2af16ac85d6a2d6a" },
+  "solarized.nvim": { "branch": "main", "commit": "bb2b42a2ae2dcb078ff308992f013f5182a362ae" },
   "typescript-vim": { "branch": "master", "commit": "e83ccab88c7a045ce795583adb66956afd464a31" },
+  "vim-airline": { "branch": "master", "commit": "d9f42cb46710e31962a9609939ddfeb0685dd779" },
+  "vim-airline-themes": { "branch": "master", "commit": "a9aa25ce323b2dd04a52706f4d1b044f4feb7617" },
+  "vim-dadbod": { "branch": "master", "commit": "960bbb7de11b7282a68d579a64e838b487934493" },
+  "vim-dadbod-ui": { "branch": "master", "commit": "066922699bdf1c6e14d517b844454b12b93ce25a" },
+  "vim-dotenv": { "branch": "master", "commit": "5c51cfcf8d87280d6414e03cd6b253eb70ecb800" },
+  "vim-fugitive": { "branch": "master", "commit": "dac8e5c2d85926df92672bf2afb4fc48656d96c7" },
   "vim-javascript": { "branch": "master", "commit": "c470ce1399a544fe587eab950f571c83cccfbbdc" },
+  "vim-markdown": { "branch": "master", "commit": "f2b82b7884a3d8bde0c5de7793b27e07030eb2bc" },
+  "vim-surround": { "branch": "master", "commit": "3d188ed2113431cf8dac77be61b842acb64433d9" },
   "vim-terraform": { "branch": "master", "commit": "21f756b933cd11ac5990a6046fdc7c4e2a6c0aee" }
 }
