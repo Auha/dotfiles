@@ -1,6 +1,5 @@
 vim.g.ariline_powerline_fonts = 1
-vim.g.airline_theme = "solarized"
-vim.g.airline_solarized_bg = "dark"
+vim.g.airline_theme = "dark"
 
 return {
     "vim-airline/vim-airline",
