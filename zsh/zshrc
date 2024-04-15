@@ -69,6 +69,3 @@ alias f="fvm flutter"
 alias d="fvm dart"
 export ANDROID_HOME=/Users/jonathan/Library/Android/sdk
 
-
-
-
